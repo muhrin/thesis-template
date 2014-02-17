@@ -1,0 +1,82 @@
+\documentclass[10pt,twoside]{report}
+
+% Author
+% Martin Uhrin
+%
+% Thesis template designed to conform to UCL thesis guidelines:
+% http://www.ucl.ac.uk/current-students/research_degrees/thesis_formatting
+
+\input{./preamble.tex}
+
+% Set margins
+\usepackage[a4paper,margin=20mm, bindingoffset=20mm]{geometry}
+
+% Set line spacing
+\usepackage{setspace}
+\doublespacing
+
+% Packages
+\usepackage{graphicx} % Loading more figure formats
+\usepackage{fancyhdr} % Fancy running head
+\usepackage{titling} % Be able to use \theauthor, \thetitle etc. 
+
+% Running head
+\pagestyle{fancy}
+
+% Date and time
+\usepackage[british]{babel}
+\usepackage[nodayofweek]{datetime}
+
+\newif\ifdebugging
+\debuggingfalse
+% SETTINGS 
+% Change these as appropriate
+\title{Thesis title}
+\author{Martin Uhrin}
+%\debuggingtrue % Uncomment to enable layout debugging
+
+\ifdebugging
+% DEBUGGING: use in conjunction with \layout somewhere in the doc to view the page layout
+% i.e. margins, footer, etc
+  \usepackage{layout}
+\fi
+
+% Set pagination
+\pagenumbering{arabic}
+
+\begin{document}
+
+
+\input{./title.tex}
+
+\chapter*{Abstract}
+
+\chapter*{Declaration}
+
+
+I, \theauthor{}, confirm that the work presented in this thesis is my own. Where information has been derived from other sources, I confirm that this has been indicated in the thesis.  The work contains nothing which is the outcome of work done in collaboration except where specifically indicated in the text.
+
+Parts of this dissertation have been published, or submitted for publication, as follows.
+
+\vfill
+
+\hfill\theauthor
+
+\hfill\monthname{} \the\year
+
+\chapter*{Acknowledgements}
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+\ifdebugging
+  \chapter*{LAYOUT DEBUGGING}
+  \layout*{}
+\fi
+
+\input{./chapters.tex}
+
+
+\end{document}
+

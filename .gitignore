@@ -3,3 +3,5 @@
 *.aux # Latex auxillary files
 *.toc # Table of contents
 *.log # Latex build log file
+*.lof
+*.backup
