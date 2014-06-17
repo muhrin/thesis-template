@@ -16,31 +16,26 @@
 %
 % See LICENSE document for the full license.
 %
+% Template author:
+% Martin Uhrin
+%
+% Thesis template designed to conform to UCL thesis guidelines:
+% http://www.ucl.ac.uk/current-students/research_degrees/thesis_formatting
+%
 
-\pagestyle{empty}                       % No numbers of title page                      
+% Change these as appropriate
+\title{Thesis title}
+\author{Martin Uhrin}
+% You can change this to a fixed date by changing this to e.g.:
+% \newdate{thesis_date}{01}{01}{2012}
+\newdate{thesis_date}{\day}{\month}{\year}
 
-\begin{center}
-\vspace*{1cm}
-{\Huge\bf \thetitle}\\ % Title
-\vspace*{3cm}
-{\Large \theauthor}\\ % Author
-\vspace*{2cm}
+% Available toggles:
+% debugging          - enable debuggin fo the template, does things like show
+%                      the margin layout and other debugging features.
+%
 
-\vfill
+%\toggletrue{debugging}
 
-{\Large University College London}
-
-\vspace*{1.5cm}
-\begin{figure}[h!]
- \centering
- \includegraphics[width=50mm]{logos/ucllogo-black.eps}
-\end{figure}
-\vspace*{1.5cm}
-\textsc{A dissertation submitted for the degree of}
-
-Doctor of Philosophy
-\monthname{} \the\year
-\end{center}
-
-\newpage
-\pagestyle{plain}                               % Page numbers at bottom
+% Set the line spacing desired
+\doublespacing
